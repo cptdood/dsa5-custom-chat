@@ -1,0 +1,43 @@
+<details>
+    <summary>
+    <header class="flexrow message-header">
+        <div class="flexcol message-title">
+            <div class="flexrow">
+            {{#if message.flags.img}}
+                {{#if (isWEBM message.flags.img)}}
+                    <video class="sender-image" src="{{message.flags.img}}" title="{{message.flags.name}}" autoplay loop></video>
+                {{else}}
+                    <img class="sender-image" src="{{message.flags.img}}" title="{{message.flags.name}}" />
+                {{/if}}
+                <h4 class="message-sender with-image"> {{alias}}</h4>
+            {{else}}
+                <h4 class="message-sender"> {{alias}}</h4>
+            {{/if}}
+
+            <span class="message-metadata">
+                <time class="message-timestamp">{{timeSince message.timestamp}}</time>
+                <span class="chatIndicator"><i title="{{localize 'CHATNOTIFICATION.BlindRoll'}}" class="fas fa-eye-slash"></i></span>
+                <span class="privateMessageIndicator"><i title="{{localize 'CHATNOTIFICATION.whisper'}}" class="fas fa-mask"></i></span>
+                {{#if user.isGM}}
+                <a class="button message-delete"><i class="fas fa-trash"></i></a>
+                {{/if}}
+            </span>
+            </div>
+
+            <h4 class="message-summary">
+                <i class="fas {{custom.sourceTypeIcon}}"></i>
+                <span>{{{custom.summary}}}</span>
+            </h4>
+        </div>
+
+        {{#if isWhisper}}
+            <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+        {{/if}}
+        {{#if message.flavor}}
+            <span class="flavor-text">{{{message.flavor}}}</span>
+        {{/if}}
+    </header>
+    </summary>
+                
+    <div class="message-content">{{{message.content}}}</div>
+</details>

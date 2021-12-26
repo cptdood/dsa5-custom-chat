@@ -1,0 +1,10 @@
+<div class="chat-filter-controls flexrow">
+    {{#each actors}}
+    <a class="button actor-filter-button" title="{{this.name}}" data-actor-id="{{this._id}}">
+        <img class="sender-image actor-filter-img" src="{{this.token.img}}">
+    </a>
+	{{/each}}
+    <div class="control-buttons">
+        <a class="button actor-filter-button-clear"><i class="fas fa-filter"></i></a>
+    </div>
+</div>

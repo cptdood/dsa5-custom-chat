@@ -1,0 +1,89 @@
+#sidebar::before {
+    background-image: none !important;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-left: 1px solid black;
+}
+
+.chat-message {
+    background: #e1d3c6 !important;
+    background-image: none !important;
+    padding: 0px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.chat-message h4 {
+    font-family: var(--normalFont);
+    overflow: visible visible;
+}
+.message-header {
+    background: #c5b8ad;
+    background-image: none !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+.message-content {
+    margin: 5px;
+}
+
+.chat-message > details > summary {
+    list-style-type: none;
+}
+.message-summary {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.chat-message[success-level="3"] .message-summary,
+.chat-message[success-level="3"] .message-header {
+    color: #fff;
+    border-color: white;
+    /*text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #38b000,
+    0 0 82px #38b000,
+    0 0 92px #38b000,
+    0 0 102px #38b000,
+    0 0 151px #38b000;/*,
+    -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+.chat-message[success-level="-3"] .message-summary,
+.chat-message[success-level="-3"] .message-header {
+    color: #fff;
+    border-color: white;
+    /*text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #ff4800,
+    0 0 82px #ff4800,
+    0 0 92px #ff4800,
+    0 0 102px #ff4800,
+    0 0 151px #ff4800;*/
+}
+
+.chat-message[success-level="3"] .message-header  {
+    background-color: #004733ad;
+    color: white;
+}
+
+.chat-message[success-level="-3"] .message-header  {
+    background-color: #8e0414ad;
+    color: white;
+}
+.chat-message[success-level="2"] .message-header  {
+    background-color: #00473350;
+}
+.chat-message[success-level="-2"] .message-header  {
+    background-color: #8e041450;
+}
+
+.chat-message[success-level="1"] .message-summary {
+    color: #1E5128;
+}
+.chat-message[success-level="-1"] .message-summary {
+    color: #950101;
+}

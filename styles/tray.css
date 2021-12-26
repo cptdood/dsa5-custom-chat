@@ -1,0 +1,21 @@
+div.chat-filter-controls {
+    margin: 0px 6px;
+    align-content: center;
+    align-items: center;
+    flex-basis: 28px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: flex-start;
+}
+a.actor-filter-button-clear {
+    text-align: center;
+    display: inline-block;
+    height: 100%;
+}
+.actor-filter-img:hover {
+    filter: brightness(150%);
+    /*filter: grayscale(100%);*/
+}
+.actor-filter-active > .actor-filter-img {
+    filter: grayscale(100%);
+}
