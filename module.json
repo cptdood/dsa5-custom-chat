@@ -2,6 +2,7 @@
     "name": "dsa5-custom-chat",
     "title": "DSA Custom Chat",
     "description": "Filterable chat for DSA5",
+    "version": "latest",
     "minimumCoreVersion": "0.8.9",
     "dependencies": [
         {
